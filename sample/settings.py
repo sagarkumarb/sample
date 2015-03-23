@@ -67,6 +67,16 @@ LOGIN_REDIRECT_URL = "/"
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '11@gmail.com'
+EMAIL_HOST_PASSWORD = 'pwd'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = '11@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+
 #DataBase
 DATABASES = {
     "default": {
