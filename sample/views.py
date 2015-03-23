@@ -1,17 +1,8 @@
-"""
-__author__ : "Sagar"
-Purpose    :  "home page"
-"""
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.contrib import messages
 
-from django.shortcuts import render, render_to_response
-from django.http import HttpResponse
 
+@login_required
 def home(request):
-	"""
-	Home page
-	template = base.html
-	params : request
-	return : template
-	"""
-	template = "base.html"
-	return render_to_response(template, {"test":"test"})
+    return render(request, "home.html", {})

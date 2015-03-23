@@ -55,6 +55,14 @@ ROOT_URLCONF = 'sample.urls'
 WSGI_APPLICATION = 'sample.wsgi.application'
 
 
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__), 'templates'),
+)
+
+#Login settings
+LOGIN_URL = "/login"
+LOGIN_REDIRECT_URL = "/"
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 

@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 <head>
-	<title>Sample Project</title>
+	{% block head %}<title>Sample Project</title>{% endblock %}
 	<!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -13,9 +13,6 @@
     {% block extra_js %}{% endblock extra_js%}
 </head>
 <body>
-{% block content %}
-<button class="btn btn-primary">test</button>
-{% endblock content %}
  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -29,21 +26,18 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Login</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+<br><br>
     <div class="container">
-
-      <div class="starter-template">
-        <h1>Sample Project</h1>
-        <p class="lead">Login to sample or contact us</p>
+	<div class="starter-template">
+        {% block content %}
+	{% endblock content %}
       </div>
-
     </div><!-- /.container -->
 
 
