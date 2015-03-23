@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Home page</title>
+{% endblock %}
+
+{% block content %}
+<form method="post" action=".">
+{% csrf_token %}
+{{ form.errors }}
+<table>
+<tr>
+    <td>Name : </td>
+    <td>{{ form.name }}</td>
+</tr>
+<tr>
+    <td>Email : </td>
+    <td>{{ form.email }}</td>
+</tr>
+</table>
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}
