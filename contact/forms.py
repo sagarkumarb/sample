@@ -6,5 +6,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     
-    name = forms.CharField(label="Your Name", max_length=100)
-    email = forms.EmailField(label="Email", max_length=100)
+    name = forms.CharField(max_length=100 , widget = forms.TextInput(
+                                                                    attrs= {'class': 'form-control', 'id': 'input_name', 'placeholder': 'Enter your name*',}))
+    email = forms.EmailField(max_length=100, widget = forms.TextInput(
+                                                                    attrs= {'class': 'form-control', 'id': 'input_email', 'placeholder': 'Enter your email*',}))
